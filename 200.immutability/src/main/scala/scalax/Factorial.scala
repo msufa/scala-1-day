@@ -1,7 +1,5 @@
 package scalax
 
-import scala.annotation.tailrec
-
 object Factorial {
   def main(args: Array[String]): Unit = {
     assert(args.size == 1, "Usage: Factorial <n>")
