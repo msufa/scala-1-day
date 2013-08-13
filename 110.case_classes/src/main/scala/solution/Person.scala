@@ -7,7 +7,7 @@ object Person {
   def describe(anyType: Any): String = {
     anyType match {
       case Person(firstName, _, age) => if (age <= 18) firstName + " is a child" else firstName + " is an adult"
-      case _ => "not human"
+      case _ => "Not human"
     }
   }
 

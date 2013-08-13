@@ -61,12 +61,12 @@ public class Person {
     return result.toString();
   }
 
-  public static String checkPerson(final Object object) {
+  public static String describe(final Object object) {
     if (object == null)
       return "parameter is null";
 
     if (!(object instanceof Person))
-      return "not human";
+      return "Not human";
 
     final Person person = (Person)object;
 
@@ -82,8 +82,8 @@ public class Person {
     final Person adult = new Person("Martin", "Smith", 47);
     final String cat = "Fluffy";
 
-    System.out.println(checkPerson(kid));
-    System.out.println(checkPerson(adult));
-    System.out.println(checkPerson(cat));
+    System.out.println(describe(kid));
+    System.out.println(describe(adult));
+    System.out.println(describe(cat));
   }
 }
