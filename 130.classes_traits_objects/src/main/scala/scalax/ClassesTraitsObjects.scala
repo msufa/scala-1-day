@@ -1,4 +1,4 @@
-package solution
+package scalax
 
 import scala.collection.mutable.ListBuffer
 
@@ -12,47 +12,23 @@ import Make._
 object Garage {
   val vehicles = new ListBuffer[Vehicle]()
 
-  def addVehicle(vehicle: Vehicle): Unit = vehicles += vehicle
-  def getVehicles: List[Vehicle] = vehicles.toList
+   /* ??? */
 }
 
-class Vehicle(val make: Make, val wheelCount : Int)
+class Vehicle /* ??? */
 
-class Truck(make: Make) extends Vehicle(make, 18)
-
-class Car(make: Make) extends Vehicle(make, 2)
+class Truck /* ??? */
 
 trait Convertible {
-  def openTop: Unit
-  def closeTop: Unit
+  ???
 }
 
-class SportsCar(make: Make) extends Car(make) with Convertible {
-  private var topOpen = false
-  override def openTop: Unit = {
-    if (topOpen) {
-      println("Top is open")
-    } else {
-      println("Opening top")
-      topOpen = true
-    }
-  }
-
-  override def closeTop: Unit = {
-    if (topOpen) {
-      println("Closing top")
-      topOpen = false
-    } else {
-      println("Top is closed")
-    }
-  }
+class SportsCar(make: Make) extends Vehicle(make, 4) with Convertible {
+  ???
 }
 
 object SportsCar {
-  def apply(makeStr: String): SportsCar = {
-    val make = Make.withName(makeStr)
-    new SportsCar(make)
-  }
+  ???
 }
 
 object ClassesTraitsObjects extends App {
