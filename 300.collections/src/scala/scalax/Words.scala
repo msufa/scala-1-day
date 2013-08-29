@@ -1,5 +1,6 @@
 package scalax
 
+<<<<<<< HEAD
 
 class Words extends App {
    val keywords = Set("scala", "rocks")

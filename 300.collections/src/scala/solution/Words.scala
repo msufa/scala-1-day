@@ -5,25 +5,31 @@ class Words extends App {
 
   var words = List.empty[String]
   for (arg <- args) {
-    ???
+    val parts = arg.split(" ")
+    for (part <- parts) {
+      if (part.length() > 0) {
+        words :+ part
+      }
+    }
   }
 
-  if (???) {
+  if (words.isEmpty) {
     println("No words!")
   } else {
-    println("First word is " + ???)
-    println("Remaining words are " + ???)
+    println("First word is " + words.head)
+    println("Remaining words are " + words.tail.mkString(","))
   }
 
-  if (???) {
+  if (words.exists(word => keywords.contains(word.toLowerCase))) {
     println("Words contain keywords")
   }
 
-  if (???) {
-      println("Words contain only keywords")
+  if (!words.isEmpty && words.forall(word => keywords.contains(word.toLowerCase))) {
+    println("Words contain only keywords")
   }
 
-  val firstNonKeyword = ???
+  val firstNonKeyword = words.find(word => !keywords.contains(word.toLowerCase))
+
   if (firstNonKeyword.isDefined) {
     println("First non-keyword is " + firstNonKeyword.get)
   } else {
