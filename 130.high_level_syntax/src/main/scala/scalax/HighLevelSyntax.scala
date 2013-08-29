@@ -26,7 +26,7 @@ object HighLevelSyntax extends App {
   // Add a parameter 'func' of type function, which takes a 'String' as a parameter and returns a 'Unit'
   // Add a return type of type function, which takes a 'String' as a parameter and returns a 'Unit'
   // Hint: See printFunc above
-	def functionAsReturnType() {
+  def functionAsReturnType() {
     // Remove the comments below i.e. the code should be executed
     // func
   }

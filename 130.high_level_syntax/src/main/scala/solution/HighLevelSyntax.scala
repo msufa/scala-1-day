@@ -17,7 +17,7 @@ object HighLevelSyntax extends App {
     func(str)
   }
 
-	def functionAsReturnType(func: (String) => Unit): (String) => Unit = {
+  def functionAsReturnType(func: (String) => Unit): (String) => Unit = {
     func
   }
 
