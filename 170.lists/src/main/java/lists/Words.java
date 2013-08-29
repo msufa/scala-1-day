@@ -1,3 +1,5 @@
+package lists;
+
 import java.util.*;
 
 public class Words {
@@ -37,6 +39,8 @@ public class Words {
         }
         if (found) {
             System.out.println("Words contain keywords");
+        } else {
+            System.out.println("No keywords found");
         }
 
         if (words.size() > 0) {
@@ -49,20 +53,28 @@ public class Words {
             }
             if (ok) {
                 System.out.println("Words contain only keywords");
+            } else {
+                System.out.println("Non-keywords found");
             }
         }
 
+        String firstKeyword = null;
         String firstNonKeyword = null;
         for (String word : words) {
-            if (!keywords.contains(word.toLowerCase())) {
-                firstNonKeyword = word;
+            if (keywords.contains(word.toLowerCase())) {
+                if (firstKeyword == null) {
+                    firstKeyword = word;
+                }
+            } else {
+                if (firstNonKeyword == null) {
+                    firstNonKeyword = word;
+                }
+            }
+            if (firstKeyword != null && firstNonKeyword != null) {
                 break;
             }
         }
-        if (firstNonKeyword != null) {
-            System.out.println("First non-keyword is " + firstNonKeyword);
-        } else {
-            System.out.println("No keywords!");
-        }
+        System.out.println("First keyword " + (firstKeyword == null ? "not found" : firstKeyword));
+        System.out.println("First non-keyword " + (firstNonKeyword == null ? "not found" : firstNonKeyword));
     }
 }
