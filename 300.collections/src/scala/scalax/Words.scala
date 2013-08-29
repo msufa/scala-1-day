@@ -1,36 +1,29 @@
 package scalax
 
-<<<<<<< HEAD
-
 class Words extends App {
    val keywords = Set("scala", "rocks")
 
    var words = List.empty[String]
    for (arg <- args) {
-     val parts = arg.split(" ")
-     for (part <- parts) {
-       if (part.length() > 0) {
-         words :+ part
-       }
-     }
+     ???
    }
 
-   if (words.isEmpty) {
+   if (???) {
      println("No words!")
    } else {
-     println("First word is " + words.head)
-     println("Remaining words are " + words.tail.mkString(","))
+     println("First word is " + ???)
+     println("Remaining words are " + ???)
    }
 
-   if (words.exists(word => keywords.contains(word.toLowerCase))) {
+   if (???) {
      println("Words contain keywords")
    }
 
-   if (!words.isEmpty && words.forall(word => keywords.contains(word.toLowerCase))) {
+   if (???) {
        println("Words contain only keywords")
    }
 
-   val firstNonKeyword = words.find(word => !keywords.contains(word.toLowerCase))
+   val firstNonKeyword: Option[String] = ???
    if (firstNonKeyword.isDefined) {
      println("First non-keyword is " + firstNonKeyword.get)
    } else {
