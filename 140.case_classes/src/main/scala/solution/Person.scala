@@ -1,23 +1,23 @@
-package solution;
+package solution
 
-case class Person(firstName: String, lastName: String, age: Int)
+class CPerson(val firstName: String, val lastName: String, val age: Int)
 
-object Person {
+case class CCPerson(firstName: String, lastName: String, age: Int)
 
-  def describe(anyType: Any): String = {
-    anyType match {
-      case Person(firstName, _, age) => if (age <= 18) firstName + " is a child" else firstName + " is an adult"
-      case _ => "Not human"
-    }
-  }
+object Person extends App {
+  val cKid = new CPerson("John", "Smith", 9)
+  val cAdult = new CPerson("Martin", "Smith", 47)
+  val cAdult2 = new CPerson("Martin", "Smith", 47)
 
-  def main(args: Array[String]): Unit = {
-    val kid = Person("John", "Smith", 9)
-    val adult = Person("Martin", "Smith", 47)
-    val cat = "Fluffy"
+  println(cKid)
+  println(cAdult)
+  println(cAdult == cAdult2)
 
-    println(describe(kid))
-    println(describe(adult))
-    println(describe(cat))
-  }
+  val ccKid = CCPerson("John", "Smith", 9)
+  val ccAdult = CCPerson("Martin", "Smith", 47)
+  val ccAdult2 = CCPerson("Martin", "Smith", 47)
+
+  println(ccKid)
+  println(ccAdult)
+  println(ccAdult == ccAdult2)
 }
