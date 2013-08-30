@@ -12,11 +12,8 @@ case class Food(price: Int) extends Item
 
 case class ShoppingCart(items: Set[Item]) {
   lazy val computeTax = {
-    items.map {
-      case Book(price) => price * 0.05
-      case Clothes(price) => price * 0.08
-      case Food(price) => price * 0.09
-    }.sum
+    // books are 5%, clothes are 8%, food is 9% (see TaxVisitor.java)
+    ???
   }
 }
 
