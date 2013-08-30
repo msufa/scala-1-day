@@ -40,3 +40,7 @@ Here are some links demonstrating richer examples:
 http://stackoverflow.com/questions/8618082/visitor-pattern-in-scala
 http://andymaleh.blogspot.ie/2008/04/scalas-pattern-matching-visitor-pattern.html
 
+There is a great academic paper by Burak Emir, Martin Odersky and John Williams
+that's worth a read if you're interested in the theory behind pattern matching:
+
+http://lampwww.epfl.ch/~emir/written/MatchingObjectsWithPatterns-TR.pdf
