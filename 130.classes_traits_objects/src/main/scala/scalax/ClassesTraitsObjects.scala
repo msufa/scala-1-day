@@ -15,7 +15,11 @@ object Garage {
    /* ??? */
 }
 
+<<<<<<< HEAD
 class Vehicle /* ??? */
+=======
+class Vehicle(make: Make, wheelCount: Int) /* ??? */
+>>>>>>> f2e2e02... Reworked 130
 
 class Truck /* ??? */
 
@@ -32,6 +36,7 @@ object SportsCar {
 }
 
 object ClassesTraitsObjects extends App {
+<<<<<<< HEAD
   Garage.addVehicle(new SportsCar(Porsche))
   Garage.addVehicle(SportsCar("BMW"))
   Garage.addVehicle(new Truck(Ford))
@@ -50,4 +55,24 @@ object ClassesTraitsObjects extends App {
       case _ => println("Not a convertible")
     }
   }
+=======
+//  Garage.addVehicle(new SportsCar(Porsche))
+//  Garage.addVehicle(SportsCar("BMW"))
+//  Garage.addVehicle(new Truck(Ford))
+//  Garage.addVehicle(new Truck(Toyota))
+
+//  Garage.getVehicles.foreach { v =>
+//    println("This vehicle is a " + v.make + " and has " + v.wheelCount + " wheels")
+//    v match {
+//      case c: Convertible => {
+//        println("Oooh, this vehicle is a convertible. Let's play with the top!")
+//        c.openTop
+//        c.openTop
+//        c.closeTop
+//        c.closeTop
+//      }
+//      case _ => println("Not a convertible")
+//    }
+//  }
+>>>>>>> f2e2e02... Reworked 130
 }
