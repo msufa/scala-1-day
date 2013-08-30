@@ -5,10 +5,6 @@ import scala.collection.mutable.ListBuffer
 object Make extends Enumeration {
   type Make = Value
   val BMW, Ford, Porsche, Toyota = Value
-<<<<<<< HEAD
-=======
-  val xx = Value(100, "asdasd")
->>>>>>> f2e2e02... Reworked 130
 }
 
 import Make._
