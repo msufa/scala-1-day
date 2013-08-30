@@ -19,11 +19,13 @@ class Vehicle(make: Make, wheelCount: Int) /* ??? */
 
 class Truck /* ??? */
 
+class Car(make: Make) /* ??? */
+
 trait Convertible {
   ???
 }
 
-class SportsCar(make: Make) extends Vehicle(make, 4) with Convertible {
+class SportsCar(make: Make) extends Car(make) with Convertible {
   ???
 }
 
