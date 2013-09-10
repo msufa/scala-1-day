@@ -10,7 +10,7 @@ object Words extends App {
 
   val even, odd: (List[String], List[String]) = ???
   println("Words with even length: " + even)
-  println("Words with even length: " + odd)
+  println("Words with odd length: " + odd)
 
   val wordHistogram: Map[String, Int] = words.foldLeft(???) {
     ???

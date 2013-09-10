@@ -38,7 +38,7 @@ public class Words {
             }
         }
         System.out.println("Words with even length: " + even);
-        System.out.println("Words with even length: " + odd);
+        System.out.println("Words with odd length: " + odd);
 
         Map<String, Integer> wordHistogram = new HashMap<String, Integer>();
         for (String word : words) {
