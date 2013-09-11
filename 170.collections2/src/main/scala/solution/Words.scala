@@ -1,4 +1,4 @@
-package lists.solution
+package solution
 
 object Words extends App {
   val keywords = Set("scala", "rocks")

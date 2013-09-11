@@ -1,4 +1,4 @@
-package lists.scalax
+package scalax
 
 object Words extends App {
    val keywords = Set("scala", "rocks")

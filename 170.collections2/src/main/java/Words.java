@@ -1,4 +1,4 @@
-package lists;
+package javax;
 
 import java.util.*;
 
