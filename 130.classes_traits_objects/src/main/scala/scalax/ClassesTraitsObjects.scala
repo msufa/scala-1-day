@@ -30,7 +30,10 @@ class SportsCar(make: Make) extends Car(make) with Convertible {
 }
 
 object SportsCar {
-  ???
+  def apply(makeStr: String): SportsCar = {
+    val make = Make.withName(makeStr)
+    ???
+  }
 }
 
 object ClassesTraitsObjects extends App {
