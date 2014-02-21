@@ -12,8 +12,8 @@ import Make._
 object Garage {
   val vehicles = new ListBuffer[Vehicle]()
 
-  def addVehicle(vehicle: Vehicle): Unit = vehicles += vehicle
-  def getVehicles: List[Vehicle] = vehicles.toList
+  def addVehicle(vehicle: Vehicle): Unit = vehicles.synchronized { vehicles += vehicle }
+  def getVehicles: List[Vehicle] = vehicles.synchronized { vehicles.toList }
 }
 
 class Vehicle(val make: Make, val wheelCount : Int)
