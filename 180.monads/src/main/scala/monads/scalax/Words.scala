@@ -3,7 +3,7 @@ package monads.scalax
 import scala.io.Source
 
 object Words extends App {
-  val keywords = Source.fromInputStream(getClass.getResourceAsStream("/keywords.txt")).getLines.toSet
+  val keywords = Source.fromURL(getClass.getResource("/keywords.txt")).getLines.toSet
 
   val words: List[String] = ???
 
