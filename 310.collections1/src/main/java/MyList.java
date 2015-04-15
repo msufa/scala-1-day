@@ -7,22 +7,36 @@ public class MyList {
     public static void main(String[] args) {
         assert(args.length >= 1);
 
-        List digits = new ArrayList();
+        List<String> list = new ArrayList<String>();
         for(int i = 0; i < args.length; i++) {
-            digits.add(Integer.parseInt(args[i]));
+            list.add(args[i]);
         }
 
-        List reversedDigits = new ArrayList();
-        reverse(digits, reversedDigits);
-        for(int i = 0; i < reversedDigits.size(); i++) {
-            System.out.print(reversedDigits.get(i) + " ");
-        }
-        System.out.println();
+        List<String> reversedTail = reverseTail(list);
+        printList(reversedTail);
     }
 
-    private static void reverse(final List in, List out) {
-        for(int i = 0; i < in.size(); i++) {
-            out.add(0, in.get(i));
+    private static List<String> reverseTail(final List<String> in) {
+        List<String> reversed = new ArrayList<String>();
+        if (in.size() == 0) {
+            return new ArrayList<String>();
+        } else {
+            reversed.add(0, in.get(0));
+            for(int i = 1; i < in.size(); i++) {
+                reversed.add(1, in.get(i));
+            }
+            return reversed;
         }
+    }
+
+    private static void printList(final List<String> in) {
+        for(int i = 0; i < in.size(); i++) {
+            if (i == 0) {
+                System.out.print(in.get(i));
+            } else {
+                System.out.print(", " + in.get(i));
+            }
+        }
+        System.out.println();
     }
 }

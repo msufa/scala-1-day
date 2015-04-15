@@ -3,12 +3,19 @@ package solution2
 object MyList extends App {
   assert(args.size >= 1, "Usage: MyList 1 2 3 ...")
 
-  val digits = args.map(_.toInt).toList
-  val reversedDigits = reverse(digits)
-  println(reversedDigits.mkString(" "))
+  val list = args.toList
+  val reversedTail = reverseTail(list)
+  printList(reversedTail)
 
-  private def reverse(in: List[Int]): List[Int] = {
-    if(in.isEmpty) List()
-    else reverse(in.tail) :+ in.head
+  private def reverseTail(in: List[String]): List[String] = {
+    if (in.isEmpty) {
+      List.empty[String]
+    } else {
+      in.head +: in.tail.reverse
+    }
+  }
+
+  private def printList(in: List[String]): Unit = {
+    println(in.mkString(", "))
   }
 }
