@@ -1,5 +1,7 @@
 package scalax
 
 object HelloWorld {
-  def main: Unit = {}
+  def main(args: Array[String]): Unit = {
+    println("Hello Scala!")
+  }
 }

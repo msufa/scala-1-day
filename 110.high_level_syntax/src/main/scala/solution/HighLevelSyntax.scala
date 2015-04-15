@@ -1,16 +1,20 @@
 package solution
 
 object HighLevelSyntax extends App {
+  def getParameter(args: Array[String]): Option[String] = {
+    if (args.length == 1) {
+      Some(args(0))
+    } else {
+      None
+    }
+  }
+
   def buildString(one: String, two: String): String = {
-    one + " " + two
+    s"$one $two"
   }
 
   val hello = "Hello"
-  var world = "World!"
+  val name = getParameter(args).getOrElse("World!")
 
-  if(args.length == 1) {
-    world = args(0)
-  }
-
-  println(buildString(hello, world))
+  println(buildString(hello, name))
 }

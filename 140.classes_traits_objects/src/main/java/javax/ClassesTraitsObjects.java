@@ -101,6 +101,8 @@ public class ClassesTraitsObjects {
                 convertible.openTop();
                 convertible.closeTop();
                 convertible.closeTop();
+            } else {
+                System.out.println("Not a convertible");
             }
         }
     }
