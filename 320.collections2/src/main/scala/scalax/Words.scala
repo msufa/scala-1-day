@@ -1,12 +1,12 @@
 package scalax
 
 object Words extends App {
-   val keywords = Set("scala", "rocks")
+  val keywords = Set("scala", "rocks")
 
-   var words = List.empty[String]
-   for (arg <- args) {
-     // ???
-   }
+  var words = List.empty[String]
+  for (arg <- args) {
+    // ???
+  }
 
   if (false /* ??? */) {
     println("No words!")
@@ -17,11 +17,11 @@ object Words extends App {
     println("Remaining words are " + remainder.mkString(","))
   }
 
-   if (false /* ??? */) {
-     println("Words contain keywords")
-   } else {
-     println("No keywords found")
-   }
+  if (false /* ??? */) {
+    println("Words contain keywords")
+  } else {
+    println("No keywords found")
+  }
 
   if (!words.isEmpty) {
     if (false /* ??? */) {
@@ -35,4 +35,4 @@ object Words extends App {
   val firstNonKeyword: Option[String] = ???
   println("First keyword " + firstKeyword.getOrElse("not found"))
   println("First non-keyword is " + firstNonKeyword.getOrElse("not found"))
- }
+}

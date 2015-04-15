@@ -7,9 +7,7 @@ object Words extends App {
   for (arg <- args) {
     val parts = arg.split(" ")
     for (part <- parts) {
-      if (part.length() > 0) {
-        words = words :+ part
-      }
+      words = words :+ part
     }
   }
 
