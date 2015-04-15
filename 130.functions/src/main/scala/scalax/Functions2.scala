@@ -8,8 +8,9 @@ object Functions2 {
 
   var countdown = 5
   val result: String = retry(6) {
-    if (countdown <= 0) "Success"
-    else {
+    if (countdown <= 0) {
+      "Success"
+    } else {
       countdown -= 1
       throw new RuntimeException("boom")
     }
