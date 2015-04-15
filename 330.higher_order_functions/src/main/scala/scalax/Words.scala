@@ -1,4 +1,4 @@
-package hof.scalax
+package scalax
 
 object Words extends App {
   val words = args.toList.flatMap { arg =>

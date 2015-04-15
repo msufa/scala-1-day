@@ -1,4 +1,4 @@
-package hof.solution
+package solution
 
 object Words extends App {
   val words = args.toList.flatMap { arg =>
