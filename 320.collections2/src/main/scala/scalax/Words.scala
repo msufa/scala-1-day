@@ -5,34 +5,34 @@ object Words extends App {
 
   var words = List.empty[String]
   for (arg <- args) {
-    // ???
+    words = words :+ arg
   }
 
-  if (false /* ??? */) {
+  if (words.isEmpty) {
     println("No words!")
   } else {
-    val first: String = ???
+    val first: String = words.head
     println("First word is " + first)
-    val remainder: List[String] = ???
+    val remainder: List[String] = words.tail
     println("Remaining words are " + remainder.mkString(","))
   }
 
-  if (false /* ??? */) {
+  if (words.find(word => keywords.contains(word)).nonEmpty) {
     println("Words contain keywords")
   } else {
     println("No keywords found")
   }
 
   if (!words.isEmpty) {
-    if (false /* ??? */) {
+    if (words.forall(word => keywords.contains(word))) {
       println("Words contain only keywords")
     } else {
       println("Non-keywords found")
     }
   }
 
-  val firstKeyword: Option[String] = ???
-  val firstNonKeyword: Option[String] = ???
+  val firstKeyword: Option[String] = words.find(word => keywords.contains(word))
+  val firstNonKeyword: Option[String] = words.find(word => !keywords.contains(word))
   println("First keyword " + firstKeyword.getOrElse("not found"))
   println("First non-keyword is " + firstNonKeyword.getOrElse("not found"))
 }
