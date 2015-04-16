@@ -13,10 +13,13 @@ object Functions extends App {
     invoke(end)
   }
 
-  def sum(to: Int) = invoke(???, ???, ???)
+  def sum(to: Int) = invoke(0, to, add)
 
-  def fact(to: Int) = ???
+  def fact(to: Int) = invoke(1, to, mult)
 
-  def pow(base: Int, exponent: Int) = invoke(???, ???, { (count, acc) => ??? })
+  def pow(base: Int, exponent: Int) = invoke(1, exponent, { (count, acc) => mult(acc, base) })
 
+  println(sum(5))
+  println(fact(3))
+  println(pow(2,4))
 }
