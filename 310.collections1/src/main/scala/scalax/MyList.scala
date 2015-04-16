@@ -8,10 +8,10 @@ object MyList extends App {
   printList(reversedTail)
 
   private def reverseTail(in: List[String]): List[String] = {
-    List.empty[String]
+    in.head :: in.tail.reverse
   }
 
   private def printList(in: List[String]): Unit = {
-    println("Not implemented yet")
+    println(in.mkString(","))
   }
 }
