@@ -1,9 +1,17 @@
 package scalax
 
-object Functions2 {
+import scala.util.{Try, Success, Failure}
+
+object Functions2 extends App {
   /** Retries the given function up to numTimes until it succeeds **/
   def retry[T](numTimes: Int)(f: => T): T = {
-    ???
+    Try(f) match {
+      case Success(v) => v
+      case Failure(ex) => {
+        if (numTimes > 0) retry(numTimes - 1)(f)
+        else throw ex
+      }
+    }
   }
 
   var countdown = 5
@@ -15,4 +23,5 @@ object Functions2 {
       throw new RuntimeException("boom")
     }
   }
+  println(result)
 }
